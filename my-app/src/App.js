@@ -1,11 +1,9 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 import './App.css';
 import './index.css';
 import lajolla from './images/beach.jpg';
 import water from './images/waher.jpg';
-import fav from './images/favlogo.png';
-
-document.title = 'ThoGus Tester';
 
 
 
@@ -16,6 +14,12 @@ const App = () => {
 
   return (
     <div className="App">
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>App/Home</title>
+            </Helmet>
+
       <header className="App-header">
 
         <div class="parentClass">
@@ -29,7 +33,6 @@ const App = () => {
             <div class="childClass child2">
             <h2>Welcome to<br/>ThoGus</h2>
             </div>
-
         </div>
 
 
@@ -41,16 +44,8 @@ const App = () => {
         </div>
 
 
-        <p><br/></p>
+        <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
 
-
-
-        <ul>
-            <img src={fav} alt="Avatar" class="logocss"/>
-            <li class="barname">ThoGus Tester</li>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-        </ul>
 
       </header>
     </div>

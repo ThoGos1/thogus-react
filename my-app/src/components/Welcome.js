@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import {Helmet} from "react-helmet";
 import script from './python/main.py';
-import './App.css';
-import './index.css';
+import '../App.js'; 
+import '../index.css';
 
 var bruh;
 
@@ -40,6 +41,12 @@ function Welcome() {
 
     return(
         <div>
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Welcome</title>
+            </Helmet>
+
             <h1>Hello, from welcome file</h1>
 
             <p>bruh var = {bruh}</p>
