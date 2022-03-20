@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {Helmet} from "react-helmet";
 import script from './python/main.py';
 import '../App.js'; 
@@ -16,24 +16,25 @@ const runScript = async (code) => {
 function Welcome() {
     const [output, setOutput] = useState("(loading...)");
     const [hydg, setHydg] = useState(0);
-    var hmmm = false;
+    const [hmmm, setHmmm] = useState(false);
+    
 
     const handleSubmit = (event) => {
+      console.log(hmmm);
+      if(hmmm){
+          window.location.reload();
+        }
         event.preventDefault();
-        if(!hmmm){
           const run = async () => {
             var scriptText = 'hello = ' + hydg + '\n';
             scriptText += await (await fetch(script)).text();
             console.log(scriptText);
             const out = await runScript(scriptText);
             setOutput(out);
-            hmmm = true;
+            setHmmm(true);
           }
           run();
-        }
-        else {
-          
-        }
+          console.log(hmmm);
     }
 
 
