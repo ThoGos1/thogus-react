@@ -4,36 +4,37 @@ import script from './python/main.py';
 import '../App.js'; 
 import '../index.css';
 
-var bruh;
 
 const runScript = async (code) => {
   const pyodide = await window.loadPyodide({
     indexURL : "https://cdn.jsdelivr.net/pyodide/v0.18.1/full/"
   });
-
   return await pyodide.runPythonAsync(code);
 }
-
 
 
 function Welcome() {
     const [output, setOutput] = useState("(loading...)");
     const [hydg, setHydg] = useState(0);
+    var hmmm = false;
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`The name you entered was: ${hydg}`);
+        if(!hmmm){
+          const run = async () => {
+            var scriptText = 'hello = ' + hydg + '\n';
+            scriptText += await (await fetch(script)).text();
+            console.log(scriptText);
+            const out = await runScript(scriptText);
+            setOutput(out);
+            hmmm = true;
+          }
+          run();
+        }
+        else {
+          
+        }
     }
-
-    useEffect(() => {
-      const run = async () => {
-        const scriptText = await (await fetch(script)).text();
-        const out = await runScript(scriptText);
-        setOutput(out);
-      }
-      run();
-  
-    }, []);
 
 
 
@@ -48,8 +49,6 @@ function Welcome() {
             </Helmet>
 
             <h1>Hello, from welcome file</h1>
-
-            <p>bruh var = {bruh}</p>
 
             <form onSubmit={handleSubmit}>
               <label>
