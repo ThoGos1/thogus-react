@@ -15,7 +15,9 @@ const main = async (kw) => {
   return await pyodide.runPythonAsync(kw);
 }
 
-
+function refreshPage() {
+  window.location.reload(false);
+}
 
 
 
@@ -74,7 +76,7 @@ export default function Expenses() {
 
             <p>python = {output} moles of Hydrogen<br/>refresh page if it's stuck loading</p>
       
-
+        <button onClick={refreshPage}>If something isn't working, press this button.</button>
       </main>
     );
   }

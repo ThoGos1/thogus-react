@@ -12,6 +12,8 @@ import Expenses from './components/Expenses';
 import Invoices from './components/Invoices';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import Question from './components/Question';
+
 
 
 ReactDOM.render(

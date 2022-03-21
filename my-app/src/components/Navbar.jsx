@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 import favlogo from '../images/favlogo.png';
 
+
 export default function Navbar() {
+
+
+
+
+
   return (
     <div>
       <nav class="fixed-top navshade" style={{backgroundColor: 'white' }}>
@@ -16,7 +22,7 @@ export default function Navbar() {
           <div>
               <li>
                 <a href="invoices">
-                  <Link to="/invoices">Invoices</Link>
+                  <Link to="/invoices" >Invoices</Link>
                 </a>
               </li>
 
@@ -25,6 +31,7 @@ export default function Navbar() {
                     <Link to="/expenses">Expenses</Link>
                 </a>
               </li>
+
 
           </div>
         </ul>
