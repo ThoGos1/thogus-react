@@ -21,7 +21,7 @@ const main = async (kw) => {
 
 
 export default function Expenses() {
-  const [output, setOutput] = useState("(loading...)");
+  const [output, setOutput] = useState("(enter a value above)");
   const [hydg, setHydg] = useState(0);
 
 
@@ -48,7 +48,7 @@ export default function Expenses() {
 
 
     return (
-      <main style={{ padding: "1rem 0" }}>
+      <main style={{ padding: "1rem 0", marginLeft: '10px' }}>
 
             <Helmet>
                 <meta charSet="utf-8" />
@@ -66,9 +66,10 @@ export default function Expenses() {
                     type="number" 
                     value={hydg}
                     onChange={(e) => setHydg(e.target.value)}
+                    class="solvbox"
                 />
               </label>
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Submit" style={{marginLeft: '10px'}} />
             </form>
 
             <p>python = {output} moles of Hydrogen<br/>refresh page if it's stuck loading</p>

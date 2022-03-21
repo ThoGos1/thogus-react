@@ -3,7 +3,7 @@ import {Helmet} from "react-helmet";
 
 export default function Invoices() {
     return (
-      <main style={{ padding: "1rem 0" }}>
+      <main style={{ padding: "1rem 0", marginLeft: '10px' }}>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Invoices</title>
