@@ -26,11 +26,6 @@ export default function Navbar() {
                 </a>
               </li>
 
-              <li>
-                <a href="welcome">
-                  <Link to="/welcome">Welcome</Link>
-                </a>
-              </li>
           </div>
         </ul>
       </nav>

@@ -7,7 +7,6 @@ import {
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Welcome from './components/Welcome';
 import reportWebVitals from './reportWebVitals';
 import Expenses from './components/Expenses';
 import Invoices from './components/Invoices';
@@ -21,7 +20,6 @@ ReactDOM.render(
     <div style={{marginBottom: '50px'}}></div>
     <Routes>
         <Route path="/" element={<App />} />
-        <Route path="welcome" element={<Welcome />} />
         <Route path="expenses" element={<Expenses />} />
         <Route path="invoices" element={<Invoices />} />
         <Route path="*" element={ <main style={{ padding: "1rem", fontSize: '42.94px' }}> <p> 404 There's nothing here! <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p> </main> }/>
