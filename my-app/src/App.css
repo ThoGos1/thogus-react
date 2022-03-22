@@ -5,7 +5,13 @@
 }
 
 .sanmateo {
-  width:40%; position: absolute; margin-top: 18px; border-radius: 15px; box-shadow: 0 3px 10px rgb(0 0 0 / 50%); margin-left: 40px;
+  width:40%;
+  position: absolute;
+  margin-top: 18px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
+  margin-left: 60px;
+  margin-right: 40px;
 }
 
 
@@ -53,7 +59,7 @@
   height: 0%;
   margin-left: 20px;
   margin-top: 20px;
-  width: 86%;
+  width: 60%;
   font-size: 50px;
   font-weight: bold;
 }
