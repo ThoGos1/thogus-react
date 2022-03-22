@@ -31,7 +31,7 @@ const App = () => {
             </div>
 
             <div class="childClass child2">
-            <h2>Welcome to<br/>ThoGus</h2>
+            <p class='apptit'>Welcome to<br/>ThoGus</p>
             </div>
         </div>
 

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import {Helmet} from "react-helmet";
 import script from './python/main.py';
-import '../App.css'; 
-import '../index.css';
+import './styles/solv.css';
 
 
 const initPyodide = window.loadPyodide({

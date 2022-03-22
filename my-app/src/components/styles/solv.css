@@ -1,0 +1,9 @@
+.solvbox {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 5px;
+  }
+  

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import favlogo from '../images/favlogo.png';
+import './styles/nav.css';
 
 
 export default function Navbar() {
