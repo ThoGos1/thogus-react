@@ -12,6 +12,7 @@ import Expenses from './components/Expenses';
 import Invoices from './components/Invoices';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import MechSolv from './components/Mechsolv';
 
 
 ReactDOM.render(
@@ -22,6 +23,7 @@ ReactDOM.render(
         <Route path="/" element={<App />} />
         <Route path="expenses" element={<Expenses />} />
         <Route path="invoices" element={<Invoices />} />
+        <Route path="mechsolv" element={<MechSolv />} />
         <Route path="*" element={ <main style={{ padding: "1rem", fontSize: '42.94px' }}> <p> 404 There's nothing here! <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p> </main> }/>
     </Routes>
     <Footer />

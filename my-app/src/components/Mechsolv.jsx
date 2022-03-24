@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import {Helmet} from "react-helmet";
-import script from './python/main.py';
+import script from './python/mech.py';
 import './styles/solv.css';
+import { initPyodide } from './Expenses';
 
 
-const initPyodide = window.loadPyodide({
-  indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.1/full/",
-})
 
-export { initPyodide };
 
 const main = async (kw) => {
   let pyodide = await initPyodide;
@@ -23,16 +20,16 @@ function refreshPage() {
 
 
 
-export default function Expenses() {
+export default function MechSolv() {
   const [output, setOutput] = useState("(enter a value above)");
-  const [hydg, setHydg] = useState(0);
+  const [angle, setAngle] = useState(0);
 
 
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('hydg: ' + hydg);
-    var scriptText = 'hello = ' + hydg + '\n';
+    console.log('angle: ' + angle);
+    var scriptText = 'hello = ' + angle + '\n';
 
     const run = async () => {
       scriptText += await (await fetch(script)).text();
@@ -55,20 +52,25 @@ export default function Expenses() {
 
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Expenses</title>
+                <title>Mechanics Solve</title>
             </Helmet>
 
-        <h3>Expenses</h3>
+        <h3>Mechanics Solve</h3>
+
+
+        <button onClick={refreshPage}>If something isn't working, press this button.</button>
 
 
 
-        <form onSubmit={handleSubmit}>
+        <div class="container" style={{marginLeft: '0px', paddingLeft: '0px'}}>
+            <div id="rcorners2">Solve for angle
+            <form onSubmit={handleSubmit}>
               <label>
                 Name:
                 <input 
                     type="number" 
-                    value={hydg}
-                    onChange={(e) => setHydg(e.target.value)}
+                    value={angle}
+                    onChange={(e) => setAngle(e.target.value)}
                     class="solvbox"
                 />
               </label>
@@ -77,7 +79,9 @@ export default function Expenses() {
 
             <p>python = {output} moles of Hydrogen<br/>refresh page if it's stuck loading</p>
       
-        <button onClick={refreshPage}>If something isn't working, press this button.</button>
+            </div>
+        </div>
+
       </main>
     );
   }

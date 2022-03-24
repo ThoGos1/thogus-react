@@ -33,6 +33,12 @@ export default function Navbar() {
                 </a>
               </li>
 
+              <li>
+                <a href="mechsolv">
+                    <Link to="/mechsolv">Mechanic Solve</Link>
+                </a>
+              </li>
+
 
           </div>
         </ul>
